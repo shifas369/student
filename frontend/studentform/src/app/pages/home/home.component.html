@@ -1,0 +1,25 @@
+<div class="container pt-5">
+<table class="table table-bordered table-light " >
+    <thead >
+      <tr >
+        <th scope="col">sl no</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Action</th>  
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students, let i=index">
+        <th scope="row">{{++i}}</th>
+        <td>{{student.name}}</td>
+        <td>{{student.age}}</td>
+        <td><button routerLink="/edit"  (click)="editstudent()"  type="button" class="btn btn-success bt-sm">Edit</button>
+          &#160;
+        <button (click)="deletestudent(student._id)" type="button" class="btn btn-danger bt-sm">Delete</button></td>
+      </tr>
+    
+      
+    </tbody>
+  </table>
+  </div>
